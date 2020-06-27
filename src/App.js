@@ -1,26 +1,60 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useReducer } from "react";
+import stateContext from "./Contexts/stateContext";
+import Routing from "./components/Routing/Routing";
+import classes from "./App.module.css";
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "showUsers": {
+      return {
+        showWebsite: false,
+        showPosts: false,
+        pageName: "Users",
+        name: "NoneAgain",
+      };
+    }
+    case "showWebsite": {
+      return {
+        showWebsite: true,
+        showPosts: false,
+        pageName: `${action.payload.name}'s Personal Website`,
+        name: action.payload.name,
+      };
+    }
+    case "showPosts":
+      {
+        return {
+          showWebsite: false,
+          showPosts: true,
+          pageName: "Posts",
+          name: action.payload.name,
+        };
+      }
+      break;
+    default:
+      return {
+        showWebsite: false,
+        showPosts: "null",
+        pageName: "",
+        name: "",
+      };
+  }
+};
+const App = (props) => {
+  const initialState = {
+    showWebsite: false,
+    showPosts: false,
+    pageName: "Users",
+    name: "none",
+  };
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <stateContext.Provider value={{ state, dispatch }}>
+      <div className={classes.App}>
+        <Routing />
+      </div>
+    </stateContext.Provider>
   );
-}
+};
 
 export default App;

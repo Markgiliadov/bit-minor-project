@@ -1,0 +1,40 @@
+.linksContainer {
+  display: flex;
+  padding: 7px;
+  text-align: center;
+  padding-right: -215px;
+}
+
+.backButton {
+  background-color: gainsboro;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  width: 400px;
+  margin: 10px;
+  font: small-caps bold 24px/1 sans-serif;
+  color: olive;
+  padding: 4px;
+  overflow: hidden;
+  height: 22px;
+  text-decoration: none;
+  margin-left: 15%;
+  box-shadow: -0.2em 0.2em olive, 0.4em -0.2em 0.4em olive;
+}
+.pageName {
+  background-color: gainsboro;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  width: 400px;
+  margin: 10px;
+  border-width: 10px;
+  font: small-caps bold 24px/1 sans-serif;
+  color: olive;
+  border-color: blue;
+  border-width: 10px;
+  padding: 4px;
+  overflow: hidden;
+  height: 22px;
+  box-shadow: 0.2em 0.2em olive, -0.4em -0.2em 0.4em olive;
+}

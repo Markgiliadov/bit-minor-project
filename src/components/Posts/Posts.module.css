@@ -1,0 +1,39 @@
+.container {
+  background-color: lemonchiffon;
+  width: 100%;
+  display: flex;
+  align-content: space-between;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  padding-left: 10px;
+  /* flex-grow: inherit; */
+  /* flex-direction: row; */
+}
+.postContainer {
+  padding: 1%;
+  width: 30%;
+
+  /* height: 15%; */
+}
+.h2 {
+  background-color: gainsboro;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  font: small-caps bold 24px/1 sans-serif;
+  color: olive;
+  padding: 4px;
+  overflow: hidden;
+  height: 70px;
+  box-shadow: 0.2em 0.2em olive, -0.4em -0.2em 0.4em olivedrab;
+}
+.p {
+  overflow: scroll;
+  background-color: rgb(218, 202, 202);
+  padding: 7px;
+  height: 150px;
+  font: italic 1.2em "Fira Sans", serif;
+  color: olivedrab;
+  border: thick double #71a6bb;
+  border-collapse: inherit;
+}

@@ -1,0 +1,11 @@
+.linkButton {
+  width: 15%;
+  height: 5%;
+  background-color: khaki;
+  cursor: pointer;
+  text-align: center;
+  text-shadow: lavenderblush;
+  font: 0.9em sans-serif;
+  border-radius: 8px;
+  text-decoration: none;
+}
